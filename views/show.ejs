@@ -1,0 +1,35 @@
+<%- include('partials/header'); %>
+
+    <div align="center" class="container">
+        <header class="jumbotron">
+            <div class="container">
+                <h2><b>Title:</b>
+                    <%=campground.name%>
+                </h2>
+                <h4><u><b>Uploaded By:</b></u>
+                    <%=campground.author%>
+                </h4>
+                <img src="<%=campground.image %>" alt="campground image">
+                <P>
+
+                </P>
+                <p>
+
+                </p>
+                <p>
+                    <u>Description</u>:
+                    <%= campground.description %>
+                </p>
+
+            </div>
+            <p>
+                <u>Comments</u>:
+                <%=campground.comments%>
+            </p>
+            <div class="container">
+                <a href="/campgrounds/<%=campground._id%>/comments" class="btn btn-success"> Show Comments</a>
+            </div>
+        </header>
+    </div>
+
+    <%- include('partials/footer'); %>

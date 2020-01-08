@@ -1,0 +1,28 @@
+<%- include('partials/header'); %>
+    <div class="container">
+        <header class="jumbotron">
+            <div class="container">
+                <h1>Welcome to Image-Hoster!</h1>
+                <p>View our hand picked images from all over the world</p>
+                <p>
+                    <a class="btn btn-primary btn-large" href="/campgrounds/new">ADD NEW CAMPGROUNDS</a>
+                </p>
+            </div>
+        </header>
+        <div class="row" style="text-align: center;">
+            <% campgrounds.forEach(function (campgrounds) {%>
+                <div class="col-md-6 col-sm-12">
+                    <div class="thumbnail">
+                        <img src="<%=campgrounds.image%>">
+                        <div class="caption">
+                            <h4>
+                                <%= campgrounds.name%>
+                            </h4>
+                        </div>
+                    </div>
+
+                </div>
+                <%  });%>
+        </div>
+    </div>
+    <%- include('partials/footer'); %>
